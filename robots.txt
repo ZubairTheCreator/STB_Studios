@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# AI answer engines — allowed on purpose: being cited in AI Overviews,
+# ChatGPT and Perplexity is a lead source for a studio this size.
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://stbstudio.co.za/sitemap.xml
