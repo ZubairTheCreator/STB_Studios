@@ -31,6 +31,24 @@ To preview locally before pushing:
 python -m http.server 8931
 ```
 
+## The founding offer (September 2026 promo) — how to take it down
+
+`founding-offer.html` is a **temporary** page. It closes **1 October 2026**, or earlier if the
+third place is taken. Everything it touches is marked with a `FOUNDING OFFER` comment.
+
+To retire it:
+
+1. Delete `founding-offer.html`.
+2. In `index.html`, delete the `.nav-offer` link in the header and the `.menu-offer` link in the
+   burger menu, then put the Small Business card back to a plain `R9,000` card (drop the
+   `price-flag`, `price-was` and `price-more` spans, and make the `<a>` a `<div>` again).
+3. In `index.html`'s JSON-LD, set the Small Business offer back to `"price": "9000"` and remove
+   `priceValidUntil`, `url` and `availability`.
+4. In `assets/styles.css`, delete the block under the `FOUNDING OFFER` banner comment.
+5. Remove the `founding-offer.html` entry from `sitemap.xml`.
+
+The original Claude Design source is kept one folder up as `Founding Offer.dc.html`.
+
 ## Before you go live — four things
 
 1. **Web3Forms key.** `index.html` has `value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY"` in the enquiry

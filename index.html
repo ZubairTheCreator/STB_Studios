@@ -80,8 +80,10 @@
             "itemOffered": { "@type": "Service", "name": "Landing Page", "description": "A single-page campaign site, built to point ads and WhatsApp traffic somewhere that converts." } },
           { "@type": "Offer", "priceCurrency": "ZAR", "price": "5000",
             "itemOffered": { "@type": "Service", "name": "Starter Package", "description": "A one-page site, live in 3–5 days." } },
-          { "@type": "Offer", "priceCurrency": "ZAR", "price": "9000",
-            "itemOffered": { "@type": "Service", "name": "Small Business Package", "description": "A 5–8 page site with Google Business Profile setup and on-page SEO included." } },
+          { "@type": "Offer", "priceCurrency": "ZAR", "price": "6500", "priceValidUntil": "2026-10-01",
+            "url": "https://stbstudio.co.za/founding-offer.html",
+            "availability": "https://schema.org/LimitedAvailability",
+            "itemOffered": { "@type": "Service", "name": "Small Business Package", "description": "A 5–8 page site with Google Business Profile setup and on-page SEO included. Founding client price until 1 October 2026; R9,000 thereafter." } },
           { "@type": "Offer", "priceCurrency": "ZAR", "price": "12500",
             "itemOffered": { "@type": "Service", "name": "Booking & Appointments", "description": "Everything in Small Business, plus online booking and automated reminders." } },
           { "@type": "Offer", "priceCurrency": "ZAR", "price": "10000", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "10000", "priceCurrency": "ZAR" },
@@ -119,13 +121,18 @@
       <img src="assets/logo.webp" alt="STB Studios" width="1033" height="230" fetchpriority="high">
     </a>
 
-    <nav class="nav-pill" aria-label="Primary">
+    <div class="nav-group">
+      <a href="founding-offer.html" class="nav-offer">
+        <span class="dot" aria-hidden="true"></span>Founder&rsquo;s Offer
+      </a>
+      <nav class="nav-pill" aria-label="Primary">
       <a href="#about" class="nav-link nav-a1">About</a>
       <a href="#services" class="nav-link nav-a2">Services &amp; Pricing</a>
       <a href="#how-it-works" class="nav-link nav-a3">How It Works</a>
       <a href="#portfolio" class="nav-link nav-a4">Portfolio</a>
       <a href="#contact" class="nav-link nav-a5">Contact</a>
-    </nav>
+      </nav>
+    </div>
 
     <div class="header-end">
       <button type="button" class="burger" data-menu-toggle aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -135,6 +142,7 @@
   </header>
 
   <div class="mobile-menu" id="mobile-menu" data-menu hidden>
+    <a href="founding-offer.html" class="menu-offer">Founder&rsquo;s Offer</a>
     <a href="#about">About</a>
     <a href="#services">Services &amp; Pricing</a>
     <a href="#how-it-works">How It Works</a>
@@ -220,11 +228,16 @@
             <span class="price-fig">R5,000</span>
             <p>A one-page site, live in 3-5 days. Everything a small operation needs to be findable and contactable.</p>
           </div>
-          <div class="price-card price-card-gold" data-appear="scale">
+          <a class="price-card price-card-gold" href="founding-offer.html" data-appear="scale">
+            <span class="price-flag">Founding offer · September only</span>
             <span class="price-name">Small Business</span>
-            <span class="price-fig">R9,000</span>
-            <p>A 5–8 page site with Google Business Profile setup and on-page SEO included.</p>
-          </div>
+            <div class="price-figs">
+              <span class="price-fig">R6,500</span>
+              <span class="price-was">R9,000</span>
+            </div>
+            <p>A 5–8 page site with Google Business Profile setup and on-page SEO included. Three founding places, live in 7 working days, with 12 months of Essential care free.</p>
+            <span class="price-more">Read the founding offer &rarr;</span>
+          </a>
           <div class="price-card" data-appear="scale">
             <span class="price-name">Booking &amp; Appointments</span>
             <span class="price-fig">R12,500</span>
