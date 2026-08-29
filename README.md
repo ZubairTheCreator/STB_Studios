@@ -1,23 +1,31 @@
 # STB Studios — stbstudio.co.za
 
 The official STB Studios website. Static HTML, CSS and one script. No build step, no framework,
-no npm. Deploys to Cloudflare Pages as-is.
+no npm. Deploys to GitHub Pages as-is.
 
-## Deploy to Cloudflare Pages
+## Pushing changes live
 
-Cloudflare Pages → **Create a project** → connect the repo, then:
+This folder **is** the live site. It's a git repo wired to
+`ZubairTheCreator/STB_Studios` (branch `main`). Pushing to `main` fires the
+`.github/workflows/static.yml` workflow, which publishes the whole repo to GitHub
+Pages at **https://stbstudio.co.za** (custom domain + HTTPS already set). No build
+step, no Cloudflare.
 
-| Setting | Value |
-|---|---|
-| Framework preset | None |
-| Build command | *(leave empty)* |
-| Build output directory | `/` |
+Edit files here, then:
 
-`_headers` is picked up automatically — it sets a one-year immutable cache on `/assets/*`,
-`must-revalidate` on the HTML, and the usual security headers (HSTS, nosniff, frame options,
-referrer policy).
+```bash
+git add -A && git commit -m "what changed" && git push
+```
 
-To preview locally:
+Live in about a minute. Check the run with `gh run watch` or at
+https://github.com/ZubairTheCreator/STB_Studios/actions.
+
+Or just tell Claude **"push the site live"** and it runs the above.
+
+`_headers` is a Cloudflare file and does nothing on GitHub Pages — Pages sets its
+own caching. Harmless; kept in case the site ever moves back.
+
+To preview locally before pushing:
 
 ```bash
 python -m http.server 8931
