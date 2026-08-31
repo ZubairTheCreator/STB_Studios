@@ -264,10 +264,14 @@ img { display: block; max-width: 100%; }
 .care-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
 .guarantee-banner {
   margin-top: 28px; text-align: center;
-  font-size: clamp(18px, 2.4vw, 26px); font-weight: 700;
+  font-size: clamp(22px, 3vw, 32px); font-weight: 700;
   letter-spacing: 0.04em; text-transform: uppercase;
-  color: #1BF74A;
+  color: #ffffff;
+  border: 1px solid rgba(27,247,74,0.4); border-radius: 16px; padding: 22px 28px;
+  background: rgba(27,247,74,0.16);
+  transition: border-color 0.35s, background 0.35s;
 }
+.guarantee-banner:hover { border-color: rgba(27,247,74,0.6); background: rgba(27,247,74,0.22); }
 .care-row {
   display: flex; align-items: flex-start; justify-content: space-between;
   flex-wrap: wrap; gap: 8px 14px;
