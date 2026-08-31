@@ -262,6 +262,12 @@ img { display: block; max-width: 100%; }
   text-transform: uppercase; color: var(--ink-dim);
 }
 .care-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.guarantee-banner {
+  margin-top: 28px; text-align: center;
+  font-size: clamp(18px, 2.4vw, 26px); font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  color: #25D366;
+}
 .care-row {
   display: flex; align-items: flex-start; justify-content: space-between;
   flex-wrap: wrap; gap: 8px 14px;
