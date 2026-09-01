@@ -255,6 +255,17 @@ img { display: block; max-width: 100%; }
 .price-name { font-size: 12.5px; font-weight: 500; letter-spacing: 0.02em; }
 .price-fig { font-size: clamp(28px, 2.2vw, 34px); font-weight: 600; letter-spacing: -0.035em; line-height: 1; }
 .price-card p { font-size: 13.5px; line-height: 1.55; }
+.price-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.price-list li {
+  position: relative; padding-left: 16px;
+  font-size: 13px; line-height: 1.5; color: rgba(255,255,255,0.78);
+}
+.price-list li::before {
+  content: ""; position: absolute; left: 0; top: 8px;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--ink-dimmer);
+}
+.price-card-blue .price-list li::before { background: #7aa8ff; }
+.price-card-gold .price-list li::before { background: #ffd66e; }
 
 .care-head {
   margin: clamp(36px, 4vw, 52px) 0 14px;
