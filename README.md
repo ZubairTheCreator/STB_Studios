@@ -8,7 +8,7 @@ no npm. Deploys to GitHub Pages as-is.
 This folder **is** the live site. It's a git repo wired to
 `ZubairTheCreator/STB_Studios` (branch `main`). Pushing to `main` fires the
 `.github/workflows/static.yml` workflow, which publishes the whole repo to GitHub
-Pages at **https://stbstudio.co.za** (custom domain + HTTPS already set). No build
+Pages at **https://stbstudios.co.za** (custom domain + HTTPS already set). No build
 step, no Cloudflare.
 
 Edit files here, then:
@@ -55,23 +55,18 @@ The original Claude Design source is kept one folder up as `Founding Offer.dc.ht
    form. Get a free key at web3forms.com, paste it in. **Until you do, the form deliberately does
    not pretend to send** — it shows "Form not connected yet" and hands the person to WhatsApp with
    their details pre-filled. It will not silently swallow a lead.
-2. **Domain.** Every absolute URL uses `https://stbstudio.co.za` — the singular, the one that's
-   live now. The brand name stays "STB Studios" everywhere; only the hostname is singular.
+2. **Domain.** Every absolute URL uses `https://stbstudios.co.za` (plural — switched from the
+   old `stbstudio.co.za` on 2026-09-17). GitHub Pages custom domain is the apex; Cloudflare DNS
+   needs the 4 GitHub `A` records on `@` and a `CNAME www -> zubairthecreator.github.io`, all
+   **DNS only** (grey cloud) or GitHub's cert check fails.
 
-   **When `stbstudios.co.za` finishes processing**, don't just repoint DNS — that would leave two
-   hosts serving identical content and split the ranking signal. Do this instead:
-   ```bash
-   grep -rl 'stbstudio\.co\.za' index.html robots.txt sitemap.xml README.md \
-     | xargs sed -i 's|stbstudio\.co\.za|stbstudios.co.za|g'
-   ```
-   Then in Cloudflare add a **301 redirect rule** from `stbstudio.co.za/*` to
-   `https://stbstudios.co.za/$1`, keep the old domain pointed at Cloudflare so the redirect
-   resolves, and add the new property in Search Console using the Change of Address tool. The 301
-   passes the accumulated ranking over; a plain DNS switch throws it away.
+   While the old domain still resolves, keep a Cloudflare **301 redirect rule** from
+   `stbstudio.co.za/*` to `https://stbstudios.co.za/$1` and use Search Console's Change of Address
+   tool so the accumulated ranking carries over.
 3. **GA4.** There's a clearly-marked commented block just above `</head>`. Paste the gtag.js
    snippet there.
 4. **Search Console.** Once the domain resolves, verify the property and submit
-   `https://stbstudio.co.za/sitemap.xml`.
+   `https://stbstudios.co.za/sitemap.xml`.
 
 ## Layout
 
