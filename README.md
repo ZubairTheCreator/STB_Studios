@@ -1,4 +1,4 @@
-# STB Studios — stbstudio.co.za
+# STB Studios — stbstudios.co.za
 
 The official STB Studios website. Static HTML, CSS and one script. No build step, no framework,
 no npm. Deploys to GitHub Pages as-is.
